@@ -1,0 +1,7 @@
+ul li{
+    cursor: pointer;
+    font-weight: 1000;
+    float: left;
+    list-style-type: none;
+    margin-left: 40px;
+}

@@ -1,0 +1,34 @@
+<!-- 
+<table class="table ">
+    <thead class="shadow row bg-primay" style="margin-left:1px; font-size: 10px; width:100%;height:30px ;">
+      <th class="col-4 ml-4">Title</th>
+     <th class="col-2">lenght</th>
+     <th class="col-2">Rating</th>
+      <th class="col-2">Control</th>
+    </thead>
+    <tbody class="table-responsive table-striped table-hover" style="background-color: inherit; height:350px; width:100%;">
+      <tr *ngFor = "let file of musicFiles" class="row" style="cursor: pointer">
+        <td class="col-4 ml-4"  (click)="playMusic(file)"> 
+          {{file.title}} </td>
+        <td class="col-2">4:00 </td>
+        <td class="col-2">* </td>
+        
+     
+      
+      </tr>
+    </tbody>
+    <tfoot class="bg-light shadow text-dark mt-5 pt-5" style="background-color: inherit;">
+   
+        <tr  class="row" style="width: 100%; background-color:#DCEAF3; margin-left:2px;">
+        <td class="col-4 ml-2">{{cTitle}}</td>
+        <td class="col-2 ml-2" (click)="back()">Back</td>
+        <td class="col-1"  style="cursor: pointer">
+          <span (click)="pauseMusic(file)" ngModel="pl">
+            <i class="fa fa-play-circle pla" ngModel="play" style="border:solid 2px blue; border-radius: 100%; color:#0079CC;font-size:40px;background: repeating-radial-gradient(white 5%,#0079CC)" [hidden]="pu"></i>
+            <i class="fa fa-pause-circle pla" ngModel="pause" style="border:solid 2px blue; border-radius: 100%; color:#0079CC;font-size:40px;background: repeating-radial-gradient(white 5%,#0079CC)" [hidden]="!pu"></i>
+          </span></td>
+        <td class="col-2 ml-2" (click)="next()">Next</td>
+        </tr>
+      </tfoot>
+  </table>
+   <div>{{music}}</div> -->

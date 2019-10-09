@@ -1,0 +1,36 @@
+<div class="fixed-bottom">
+ <table class="bg-light shadow text-dark mt-5 pt-5" style="background-color: inherit; width:100%">
+    <tr style="background-color: rgb(213, 237, 252);width: 100%">
+       <input (change)="pro()"  type="range" class="prog" [(ngModel)]="progressRate" style="width: 100%">
+    </tr>
+     <tr  class="row" style=" width:100%; background-color:#DCEAF3; margin-left:2px;">
+       <td class="col-md-3 tit" style="font-size:15px"><span *ngIf='anything.file'>{{anything.selectedMusic.name}} {{anything.selectedMusic.title}}</span></td>
+       <td class="col-md-5 propt" style="margin-top: -20px">
+        <span class="row rd">
+         <span style="margin-top: 10px;" class="col-md-1 col-1"><i [class.zero]=" rand"  (click)="rando()"  class="fa fa-random">R</i></span>
+         <span style="margin-top: 10px;" class="col-md-1 col-1"><i [class.zero]="anything.rep" class="fa fa-repeat"  (click)="repeat(rep)"></i></span>
+         <span style="margin-top: 10px;" class="col-md-1 col-1"><i [class.zero]="anything.st"  (click)="sto()" class="fa fa-stop">S</i></span>
+         <span  style="margin-top: 10px;" class="col-md-1 col-1"> <i (click)="back()" class="fa fa-fast-backward"></i></span>
+         <span class="col-md-1 col-1 mr-3 pt-1 p" >
+            <i *ngIf='!anything.pu' (click)='anything.play();' class="fa fa-play-circle pla" style="border:solid 2px blue; border-radius: 100%; color:#0079CC;background: repeating-radial-gradient(white 5%,#0079CC)" ></i>
+            <i *ngIf= 'anything.pu' (click) = 'pauseMusic()' class="fa fa-pause-circle pla" style="border:solid 2px blue; border-radius: 100%; color:#0079CC;background: repeating-radial-gradient(white 5%,#0079CC)" ></i>
+        </span>
+        <span style="margin-top: 10px;"  class="col-md-1 col-1"><i (click)="anything.next()"  class="fa fa-fast-forward"></i></span>
+        <span class="col-md-1 col-1">
+           <i (click)="v1()" style=" margin-top: 20px;margin-right: 10px;" class="fa fa-volume-up" [hidden]="v"></i>
+           <i (click)="v2()"  style=" margin-top: 20px; margin-right:10px;" class="fa fa-volume-down" [hidden]="!v"></i>
+        </span>
+        <span class="col-2" class="slidecontainer">
+           <input (change)="volume()"  style=" margin-top: 20px" [(ngModel)]="event"  type="range" class="slider">
+        </span>
+      </span>
+     </td>
+     <td class="col-md-4 time">{{anything.time}}</td>
+   </tr>
+ </table>
+ <!-- <tr *ngFor="let n of anything.musifiles.playlist.songs"> 
+    <p>{{n.name}}</p>
+ </tr> -->
+</div>
+ 
+

@@ -1,0 +1,48 @@
+
+<div class="row conta">
+  <span class="col-lg-3 col-md-12 col-sm-12 c" >
+      <p ><span class="fa fa-music">Playlist</span></p>
+      <div>
+      <ul>
+        <li *ngFor='let list of anything.musicFiles'style="list-style: 
+        none;" (click)="anything.chooseplaylist(list.playlist)">
+          <span >{{list.playlist.name}}</span>
+      </li>
+      </ul>
+      </div>
+   
+    <!-- <div class="col-2"> -->
+    <!-- <input  type="text" [(ngModel)]="creat" [hidden]="sence" style="width:100px;margin-left:-10px;"><br> -->
+    <!-- <button (click)="increase()">add</button> -->
+      <!-- </div> -->
+  </span>
+  <table class="col-lg-8 col-md-12 col-sm-12 table  " style="cursor: pointer;width: 100%; height:100%;">
+  <thead class=" row" style="margin-left:1px; font-size: 10px; width:100%;height:30px;border: 1px solid #D8E5F5;border-radius: 2px;">
+    <th class="col-md-4">Title</th>
+   <th class="col-md-2">lenght</th>
+   <th class="col-md-2">Rating</th>
+   <th class="col-md-4">contributiing artist</th>
+  </thead>
+  <tbody class="row shadow table-border" style="width:100%; overflow: auto;background-color:inherit; height:400px; border-right:inherit 40px solid; border-left:inherit 40px solid;">
+    <tr class="row ml-3" *ngFor = "let file of anything.play_list.songs; let Index=index" style="margin-left:0px; width: 100%">
+      <td class="col-md-4" (click)="anything.playMusic(file)"> {{file.name}}  {{file.title}} </td>
+      <td class="col-md-2">{{file.lent}} </td>
+      <td class="col-md-2">** </td>
+      <td class="col-md-4">{{file.name}}</td>
+    </tr>
+  </tbody>
+ 
+</table>
+    <!-- <div class="col-3">
+      <div class="pls">
+          <button (click)="addmusic()" [hidden]="sin">addplay</button>
+          <button>Burn</button>
+          <button>Sync</button>
+      </div>
+     
+      <div  style="cursor: pointer; border:grey solid 1px;height:430px; width:360px; overflow: auto" formsControl="playList">
+        <p *ngFor="let l of playList" (click)="go(l)">{{l.name}} {{l.title}}</p>
+      </div> -->
+      <!-- <button  [hidden]="sence" class="bg-success" (click)="sendtopl()"> add to playList</button> -->
+<!-- </div> -->
+</div>
